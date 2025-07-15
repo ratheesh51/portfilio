@@ -1,0 +1,41 @@
+.experience-page {
+  padding: 2rem;
+  background-color: #0f172a;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.experience-block {
+  background-color: #1e293b;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.experience-block h3 {
+  color: #38bdf8;
+  margin-bottom: 1rem;
+}
+
+.experience-block h4 {
+  color: #22c55e;
+  margin-top: 1.5rem;
+}
+
+.experience-block p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.experience-block a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.experience-block a:hover {
+  color: #22c55e;
+}

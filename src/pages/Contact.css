@@ -1,0 +1,30 @@
+.contact-page {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #0f172a;
+  color: #fff;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.contact-item:hover {
+  color: #22c55e;
+  border-bottom: 2px solid #22c55e;
+}
