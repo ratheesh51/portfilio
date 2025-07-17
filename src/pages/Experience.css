@@ -1,41 +1,97 @@
 .experience-page {
-  padding: 2rem;
-  background-color: #0f172a;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #ffffff;
   min-height: 100vh;
 }
 
+.experience-page h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #22c55e, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
 .experience-block {
-  background-color: #1e293b;
-  padding: 1.5rem;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  padding: 2rem;
   margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #22c55e, #38bdf8);
+}
+
+.experience-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(56, 189, 248, 0.5);
 }
 
 .experience-block h3 {
   color: #38bdf8;
   margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .experience-block h4 {
   color: #22c55e;
   margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .experience-block p {
   color: #cbd5e1;
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .experience-block a {
-  display: inline-block;
-  margin-top: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
   color: #38bdf8;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  transition: all 0.3s ease;
 }
 
 .experience-block a:hover {
-  color: #22c55e;
+  background: rgba(56, 189, 248, 0.2);
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+}
+
+@media (max-width: 768px) {
+  .experience-page h2 {
+    font-size: 2rem;
+  }
+  
+  .experience-block {
+    padding: 1.5rem;
+  }
 }
