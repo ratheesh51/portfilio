@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+.objective-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.objective-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: floatShape 8s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #38bdf8, #22c55e);
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, #8b5cf6, #38bdf8);
+  top: 70%;
+  right: 15%;
+  animation-delay: 3s;
+}
+
+.shape-3 {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, #22c55e, #8b5cf6);
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 6s;
+}
+
+@keyframes floatShape {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(180deg); }
+}
+
+.objective-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.objective-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.objective-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: slideInDown 0.8s ease-out 0.2s both;
+}
+
+.header-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #38bdf8, #22c55e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.header-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.objective-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #22c55e;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(34, 197, 94, 0.3);
+  position: relative;
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 100px; }
+}
+
+.objective-main {
+  display: flex;
+  justify-content: center;
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+.objective-card {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 3rem;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.objective-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e, #8b5cf6);
+  background-size: 200% 100%;
+  animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rotating-keywords {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.keyword-label {
+  color: #38bdf8;
+}
+
+.keyword-rotating {
+  color: #22c55e;
+  min-width: 120px;
+  text-align: left;
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.objective-text {
+  margin-bottom: 3rem;
+}
+
+.main-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.highlight {
+  color: #38bdf8;
+  font-weight: 600;
+  background: linear-gradient(45deg, #38bdf8, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.goals-section {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.goal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.goal-item:nth-child(1) { animation-delay: 0.6s; }
+.goal-item:nth-child(2) { animation-delay: 0.8s; }
+.goal-item:nth-child(3) { animation-delay: 1s; }
+
+.goal-item:hover {
+  background: rgba(56, 189, 248, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.goal-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #38bdf8, #22c55e);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+
+.goal-content h4 {
+  color: #22c55e;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.goal-content p {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.commitment-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.commitment-badge {
+  position: relative;
+  background: linear-gradient(45deg, #38bdf8, #22c55e);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+  animation: fadeInUp 0.8s ease-out 1.2s both;
+}
+
+.badge-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #38bdf8, #22c55e);
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0.5;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .objective-container {
+    padding: 1rem;
+  }
+  
+  .objective-title {
+    font-size: 2.5rem;
+  }
+  
+  .objective-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .main-text {
+    font-size: 1.2rem;
+  }
+  
+  .rotating-keywords {
+    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .goal-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .goal-icon {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .objective-title {
+    font-size: 2rem;
+  }
+  
+  .objective-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .main-text {
+    font-size: 1.1rem;
+  }
+  
+  .commitment-badge {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
