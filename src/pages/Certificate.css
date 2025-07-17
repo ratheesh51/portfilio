@@ -1,6 +1,7 @@
 .certificates-page {
   padding: 2rem;
   text-align: center;
+  background-color: #1e293b;  /* added */
 }
 
 .cert-list {

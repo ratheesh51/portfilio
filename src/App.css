@@ -1,0 +1,37 @@
+/* Reset some defaults */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   /* Tailwind's slate-50 */
+  color: #0f172a; /* Tailwind's slate-900 */
+}
+
+/* Apply a consistent layout */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Content below navbar */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+
+/* Optional footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0f172a;
+ 
+}
