@@ -1,8 +1,8 @@
 import React from 'react';
 import './Contact.css'; // Optional for styling
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { SiAmazonaws } from 'react-icons/si';
 
+import { FaAws } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className="contact-page">
@@ -14,7 +14,7 @@ const Contact = () => {
         </a>
 
         <a href="https://www.credly.com/users/ratheesh-v-h/badges" target="_blank" rel="noopener noreferrer" className="contact-item">
-          <SiAmazonaws size={32} />
+          <FaAws size={32} />
           <span>RATHEESH VH</span>
         </a>
 

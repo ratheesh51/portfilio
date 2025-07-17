@@ -1,5 +1,5 @@
 import React from 'react';
-import profile from '../assets/images/ratheesh-profile.jpg';
+import profile from '../assets/914.jpg';
 
 const Home = () => (
   <div className="home">

@@ -1,0 +1,54 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a pleasant font and background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* Home component styling */
+.home {
+  background: white;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Profile image styling */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 4px solid #4caf50;
+}
+
+/* Headings and paragraph spacing */
+.home h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.home p {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Optional hover effect */
+.home p:hover {
+  color: #4caf50;
+  transition: color 0.3s ease;
+}
